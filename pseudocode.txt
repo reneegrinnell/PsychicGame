@@ -1,0 +1,45 @@
+Pseudocode for Psychic Game
+
+GAME VARIABLES
+=========================================
+# Wins - running tally across all games
+# Losses - running tally across all games
+# Guesses Remaining - running tally during one game, get 9 guesses
+Player's Guesses - lists letters guessed so far during one game
+Computer's Choice - letter randomly chosen by computer
+
+
+GAME STEPS
+=========================================
+Game begins with these settings written to DOM: 
+    -Wins, losses at 0
+    -Guesses Remaining at 9
+    -Player's Guesses empty/nothing displayed yet
+
+Directions are also displayed to "guess what letter I'm thinking of"
+
+Computer randomly chooses a letter from a-z
+
+Letter stored as variable/Computer's Choice
+
+User presses an a-z key
+(If user presses a non a-z key, make it so nothing happens)
+
+Their guess (key pressed) is either correct or not
+    -IF CORRECT:
+        -letter pressed displays in "Player's Guesses"
+        -game restarts for a new round:
+            -wins goes up by 1
+            -player's guesses clears out
+            -guesses remaining resets to 9
+            -computer randomly chooses a new letter
+    -IF INCORRECT:
+        -letter pressed displays in "Player's Guesses"
+        -# of guesses remaining goes down by 1
+        -computer's randomly chosen letter remains the same
+    -IF GUESSES REMAINING = 0
+        -game restarts for a new round:
+            -losses goes up by 1
+            -player's guesses clears out
+            -guesses remaining resets to 9
+            -computer randomly chooses a new letter
