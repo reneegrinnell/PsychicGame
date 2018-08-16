@@ -3,9 +3,11 @@ Pseudocode for Psychic Game
 GAME VARIABLES
 =========================================
 # Wins - running tally across all games
-# Losses - running tally across all games
+# Losses - running tally across all games (failure to guess correctly before 
+    exhausting guesses remaining)
 # Guesses Remaining - running tally during one game, get 9 guesses
-Player's Guesses - lists letters guessed so far during one game
+Player's Guesses - lists letters guessed so far during one game (displayed
+    until user wins or loses one game)
 Computer's Choice - letter randomly chosen by computer
 
 
@@ -28,7 +30,7 @@ User presses an a-z key
 Their guess (key pressed) is either correct or not
     -IF CORRECT:
         -letter pressed displays in "Player's Guesses"
-        -game restarts for a new round:
+        -game restarts for a new round (without refreshing page):
             -wins goes up by 1
             -player's guesses clears out
             -guesses remaining resets to 9
@@ -38,7 +40,7 @@ Their guess (key pressed) is either correct or not
         -# of guesses remaining goes down by 1
         -computer's randomly chosen letter remains the same
     -IF GUESSES REMAINING = 0
-        -game restarts for a new round:
+        -game restarts for a new round (without refreshing):
             -losses goes up by 1
             -player's guesses clears out
             -guesses remaining resets to 9
