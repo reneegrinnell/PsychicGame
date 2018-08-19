@@ -31,12 +31,11 @@ function startPsychicGame() {
             if (event.keyCode < 65 || event.keyCode > 90) {
                 alert("Letters only, por favor!");
 
-                //Shames player for repeating guesses/having repeat guesses deducted :oP
-                // from # of guesses
+            //Shames player for repeating guesses/having repeat guesses deducted :oP
             } else if (yourGuess.indexOf(playerChoice) >= 0) {
                 alert("Stop repeating yourself (repeating yourself)!");
 
-                //For a correct guess, game begrudgingly admits player's psychic prowess
+            //For a correct guess, game begrudgingly admits player's psychic prowess
             } else if (playerChoice === computerChoice) {
                 console.log("You won!");
                 alert("You won! But since you're psychic, you already knew that...right?");
@@ -47,10 +46,9 @@ function startPsychicGame() {
 
                 resetGame();
 
-                //For each incorrect guess by the player
             } else {
 
-                // Decreases remaining guesses by 1
+                // For each incorrect guess by player, decreases remaining guesses by 1
                 guessesLeft--;
 
                 // Appends player's choice to the array/yourGuess variable
